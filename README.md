@@ -1,2 +1,2 @@
-# Challenge-03
+# Password Generator 
 JavaScript Challenge (fix a code)
