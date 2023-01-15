@@ -112,7 +112,7 @@ function generatePassword() {
     passwordBlank.push(allChoices);
   }
 
-
+//to produce the password after user has picked their selection
   var password = passwordBlank.join("");
   return password;
 }
