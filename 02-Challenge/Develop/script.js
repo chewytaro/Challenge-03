@@ -47,9 +47,9 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   characterLength = prompt("How many characters do you want for your password? (8-128)");
     if (!characterLength) {
-      alert ('Please input a number between 8 and 128');
+      characterLength = alert ('Please input a number between 8 and 128');
     } else if (characterLength < 8 || characterLength > 128) {
-      alert ('Please input a number between 8 and 128');
+      characterLength = alert ('Please input a number between 8 and 128');
     } else {
        uppercasePicked = confirm("Would you like to include uppercase characters?");
        lowercasePicked = confirm("Would you like to icnlude lowercase characters?");
@@ -105,8 +105,9 @@ function generatePassword() {
 
 
   var passwordBlank = [];
+
 //this makes it so that the length the users input is the length the password will be 
-  for (var i = 7; i < characterLength; i++) {
+  for (var i = 0; i < characterLength; i++) {
     var allChoices = usersPicked[Math.floor(Math.random() * usersPicked.length)];
     passwordBlank.push(allChoices);
   }
