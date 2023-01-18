@@ -48,8 +48,10 @@ function generatePassword() {
   characterLength = prompt("How many characters do you want for your password? (8-128)");
     if (!characterLength) {
       characterLength = alert ('Please input a number between 8 and 128');
+      return;
     } else if (characterLength < 8 || characterLength > 128) {
       characterLength = alert ('Please input a number between 8 and 128');
+      return;
     } else {
        uppercasePicked = confirm("Would you like to include uppercase characters?");
        lowercasePicked = confirm("Would you like to icnlude lowercase characters?");
