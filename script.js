@@ -9,7 +9,7 @@ var uppercasePicked;
 var lowercasePicked;
 var numbersPicked;
 var specialPicked; 
-var usersPicked;
+var usersPicked = [];
 
 
 var uppercaseCharacters = ["A", "B", "C", "D", "F", "G", "H", "I", "J", "K", "L", "M",
@@ -63,6 +63,7 @@ function generatePassword() {
 //if users pick nothing or if they pick all four
   if (!uppercasePicked && !lowercasePicked && !numbersPicked && !specialPicked) {
     usersPicked = alert ('Please select at least one option');
+    return;
   } else if (uppercasePicked && lowercasePicked && numbersPicked && specialPicked) {
     usersPicked = uppercaseCharacters.concat(lowercaseCharacters, numberCharacters, specialCharacters);
   } 
@@ -110,7 +111,7 @@ function generatePassword() {
 
 //this makes it so that the length the users input is the length the password will be 
   for (var i = 0; i < characterLength; i++) {
-    var allChoices = usersPicked[Math.floor(Math.random() * usersPicked.length)];
+    var allChoices = usersPicked[(Math.floor(Math.random() * usersPicked.length))];
     passwordBlank.push(allChoices);
   }
 
