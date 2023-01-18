@@ -57,7 +57,6 @@ function generatePassword() {
        specialPicked = confirm("Would you like to include special characters?");    
     };
 
-  
 
 //if users pick nothing or if they pick all four
   if (!uppercasePicked && !lowercasePicked && !numbersPicked && !specialPicked) {
@@ -65,6 +64,7 @@ function generatePassword() {
   } else if (uppercasePicked && lowercasePicked && numbersPicked && specialPicked) {
     usersPicked = uppercaseCharacters.concat(lowercaseCharacters, numberCharacters, specialCharacters);
   } 
+
 
 //if they only choose three options
   else if (uppercasePicked && lowercasePicked && numbersPicked && !specialPicked) {
